@@ -6,6 +6,9 @@ MENU=()
 NAME=()
 i=1
 
+GREEN=""
+DARKGREEN=""
+
 function border ()
 {
   echo -n ${GREEN}
@@ -50,7 +53,7 @@ function choose ()
     echo -n "ENTER A NUMBER > "
     read num
     [ "x$num" = "xq" ] && echo "Goodbye!" && break
-    num=`tr -dc 0-9 <<< "$num"`
+    num=`tr -dc 0-9 <<< "$num" | head -c 3`
     [ -n "$num" ] || continue
     (( $num > $#MENU )) && continue
     cd $MENU[$num]
