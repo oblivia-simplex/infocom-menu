@@ -1,6 +1,6 @@
-#! /usr/local/bin/zsh
+#! /usr/bin/env zsh
 
-DIR=~/Games/IF/Infocom
+DIR=~/Games/IF/Infocom/
 
 MENU=()
 NAME=()
